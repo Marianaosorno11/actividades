@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>activiidad2</title>
+</head>
+<body background="fondo.png">
+	<div class="b1">
+		<p style=" font-family: Courier New; position: absolute; left: 35%; top: 15%"> INGRESA NUMEROS </p>
+<input type="text" name="NOMBRES"  id="no1" style="position: absolute; left: 32%; top: 50%">
+<input type="button" name="ENVIA1" onclick="v1()" style="position: absolute; left: 42%; top: 70%;  font-family: Courier New;" value="ENVIAR">
+</div>
+<div class="b2">
+	<p style=" font-family: Courier New; position: absolute; left: 37%; top: 15%"> NUMERO MAYOR </p>
+<input type="text" name="MOSTRAR" id="no2" style="position: absolute; left: 32%; top: 50%">
+<input type="button" name="ENVIA1" onclick="v2()"  style="position: absolute; left: 37%; top: 70%;  font-family: Courier New;" value="MOSTRAR MAYOR" >
+</div>
+<div class="n" onclick="window.location.href='actividad3.html'" style=" position: absolute; left:30%; height: 1%;width: 40%; top: 87%"><img src="tc3.png"></div>
+<style>
+	.b1{
+		position: absolute;
+		left: 30%;
+		height: 200px;
+		width: 500px;
+		background-color: #FAECEC ;
+		top: 15%;
+	}
+		.b2{
+		position: absolute;
+		left: 30%;
+		height: 200px;
+		width: 500px;
+		background-color: #E3EEF4  ;
+		top: 50%
+	}
+</style>
+<script>
+
+  
+var c=[0];
+
+function v1()
+
+{
+
+var no1=document.getElementById("no1").value;
+ t=c.length;
+if(t<=5)
+{
+	c.push(no1);
+console.log(c);
+document.getElementById("no1").value="";
+}
+if (t==6) 
+{
+alert('nomas');
+}
+}
+function v2()
+{
+	var mayor=0;
+	var i=0;
+	for (var i =0; i <= 5; i++) 
+	{
+		if(c[i]>mayor)
+		{
+		mayor=c[i];		
+		}
+	 }
+ console.log(mayor);
+ no2.value=mayor;
+	}
+</script>
+</body>
+</html>

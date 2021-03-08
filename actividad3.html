@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PUNTO #3</title>
+</head>
+<body onmousemove="position(event)" background="fondo.png">
+
+<div id="mousePositions"></div>
+<div id="fuera"	class="afuera"><center><br>FUERA</center> </div>
+<div id="dentro"class="n"><center><br>DENTRO</center> </div>
+
+
+<script>
+function position(event){
+var n1=document.getElementById('fuera');
+var n2=document.getElementById('dentro');
+	var x = event.clientX;
+	var y = event.clientY;
+	mousePositions.innerHTML = 'X: '+x+', Y: '+y;
+if(x>451&&x<860&&y>150&&y<479)
+{
+	n2.className="adentro";
+	n1.className="n";
+}
+else
+{
+	n1.className="afuera";
+	n2.className="n";
+}
+}
+
+</script>
+
+</body>
+
+</html>
+<style type="text/css">
+
+#mousePositions{
+
+	
+	color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	height:300px;
+	overflow:auto;
+	width:150px;
+				}
+.n{
+display:none;
+		}
+	.afuera{
+	position: absolute;
+	top: 23%;
+	left: 33%;
+	width: 30%;
+	height: 50%;
+	background-color:#432850;
+	color:#F6ECFA;
+	font-size:500%; 
+	font-family: Courier New;
+	
+	}
+	.adentro{
+	position: absolute;
+	top: 23%;
+	left: 33%;
+	width: 30%;
+	height: 50%;
+	background-color: #F6ECFA;
+	color:#432850;
+	font-size:500%; 
+	font-family: Courier New;
+	
+	}
+</style>

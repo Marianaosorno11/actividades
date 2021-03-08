@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hola</title>
+	<script >
+		var x =10;
+	</script>
+</head>
+<body onload="hola()">
+
+	<div id="mensaje" style="height: 100%; position: absolute; left:0%; width: 100%; background-color:  #FAECEC; top: 0%;color: white; font-size: 1000%; text-align: center; display: flex; align-items: center; justify-content: center;font-family: Courier New;"; ></div>
+	<div class="n" onclick="window.location.href='actividad2.html'" style=" position: absolute; left:60%; height: 1%;width: 40%; top: 87%"><img src="tc2.png"></div>
+
+	<script >
+
+ function hola(){
+		var mensaje=document.getElementById('mensaje');
+		    mensaje.innerHTML='HOLA';
+		    funcion=setTimeout(sal,5000);
+
+	}
+ function sal()
+      {
+      	nuevo=setInterval(saludo,1000);
+      }
+
+	function saludo(){
+		
+      var mensaje=document.getElementById('mensaje');
+		    mensaje.innerHTML=x;
+		x=x-1;
+		if(x==-1){
+			clearInterval(nuevo);
+			var mensaje=document.getElementById('mensaje');
+		    mensaje.innerHTML='FIN';
+
+
+		}
+	}
+
+
+
+	</script>
+	
+
+</body>
+</html>
+<style type="text/css">
+	.n{
+		height: 40%;
+		width: 30%;
+	}
+</style>
